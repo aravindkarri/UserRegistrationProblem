@@ -8,15 +8,21 @@ public class UserRegistrationMain
 	{
 		System.out.println("Welcome to User Registration Problem");
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter your first name: ");
-		String firstName = scanner.next();
-		scanner.close();
-		
-		/**
-		 * UC1
+
+		/**UC1
 		 * Check first name
 		 */
+		System.out.println("Enter your first name: ");
+		String firstName = scanner.next();
 		UserRegistration obj1 = new UserRegistration();
 		obj1.checkFirstName(firstName);
+
+		/**UC2
+		 * Check last name
+		 */
+		System.out.println("Enter your last name: ");
+		String lastName = scanner.next();
+		UserRegistration obj2 = new UserRegistration();
+		obj2.checkLastName(lastName);
 	}
 }
