@@ -11,7 +11,7 @@ public class UserRegistration
 	 */
 	public void checkFirstName(String name)
 	{
-		boolean isMatched = Pattern.compile("(^([A-Z]{1})[a-z]{2,})+").matcher(name).matches();
+		boolean isMatched = Pattern.compile("(^([A-Z]{1})[a-z]{2,})+$").matcher(name).matches();
 		if(isMatched)
 		{
 			System.out.println("It is valid name");
@@ -28,14 +28,14 @@ public class UserRegistration
 	 */
 	public void checkLastName(String name)
 	{
-		boolean isMatched = Pattern.compile("(^([A-Z]{1})[a-z]{2,})+").matcher(name).matches();
+		boolean isMatched = Pattern.compile("(^([A-Z]{1})[a-z]{2,})+$").matcher(name).matches();
 		if(isMatched)
 		{
-			System.out.println("It is valid name");
+			System.out.println("It is valid last name");
 		}
 		else
 		{
-			System.out.println("It is not a valid name");
+			System.out.println("It is not a valid last name");
 		}
 	}
 	/**
@@ -54,5 +54,16 @@ public class UserRegistration
 			System.out.println("invalid email");
 		}
 	}
-
+	public void isValidMobileNumber(String name)
+	{
+		boolean isMatched = Pattern.compile("^[0-9]{2}[ ][0-9]{10}$").matcher(name).matches();
+		if(isMatched)
+		{
+			System.out.println("It is valid mobile number");
+		}
+		else
+		{
+			System.out.println("It is not a valid mobile number");
+		}
+	}
 }
