@@ -54,6 +54,10 @@ public class UserRegistration
 			System.out.println("invalid email");
 		}
 	}
+	/**
+	 * Method to check given mobile number is valid or not
+	 * @param name
+	 */
 	public void isValidMobileNumber(String name)
 	{
 		boolean isMatched = Pattern.compile("^[0-9]{2}[ ][0-9]{10}$").matcher(name).matches();
@@ -64,6 +68,22 @@ public class UserRegistration
 		else
 		{
 			System.out.println("It is not a valid mobile number");
+		}
+	}
+	/**
+	 * Method to check given password has minimum 8 characters
+	 * @param name
+	 */
+	public void isValidPassword(String name)
+	{
+		boolean isMatched = Pattern.compile("[0-9a-zA-Z]{8,}").matcher(name).matches();
+		if(isMatched)
+		{
+			System.out.println("It is valid password");
+		}
+		else
+		{
+			System.out.println("It is not a valid password");
 		}
 	}
 }

@@ -37,8 +37,17 @@ public class UserRegistrationMain
 		 * Check mobile number is valid or not
 		 */
 		System.out.println("Enter your mobile number: ");
-		String mobileNumber = scanner.nextLine();
+		String mobileNumber = scanner.next();
 		UserRegistration obj4 = new UserRegistration();
 		obj4.isValidMobileNumber(mobileNumber);
+		
+		/**UC5
+		 * Check password with 8 characters
+		 */
+		System.out.println("Enter password: ");
+		String password = scanner.next();
+		UserRegistration obj5 = new UserRegistration();
+		obj5.isValidPassword(password);
+		
 	}
 }
