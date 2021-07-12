@@ -47,7 +47,7 @@ public class UserRegistrationMain
 		System.out.println("Enter password: ");
 		String password = scanner.next();
 		UserRegistration obj5 = new UserRegistration();
-		obj5.isValidPassword(password);
+		obj5.checkCharacters(password);
 		
 		/**UC6
 		 * Check password contains atleast upper case or not
@@ -62,5 +62,10 @@ public class UserRegistrationMain
 		 * Check password has atleast one special character or not
 		 */
 		obj5.checkSpecialCharacter(password);
+		/**
+		 * UC9
+		 * Check entered password is valid or not using above rules
+		 */
+		obj5.isValidPassword(password);
 	}
 }

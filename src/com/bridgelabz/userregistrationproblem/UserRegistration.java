@@ -74,7 +74,7 @@ public class UserRegistration
 	 * Method to check given password has minimum 8 characters
 	 * @param name
 	 */
-	public void isValidPassword(String name)
+	public void checkCharacters(String name)
 	{
 		boolean isMatched = Pattern.compile("[0-9a-zA-Z@!+_.-]{8,}").matcher(name).matches();
 		if(isMatched)
@@ -132,6 +132,21 @@ public class UserRegistration
 		else
 		{
 			System.out.println("Enter exactly one special character");
+		}
+	}
+	/**
+	 * Method to check entered password is valid or not based on password rules
+	 */
+	public void isValidPassword(String name)
+	{
+		boolean isMatched = Pattern.compile("(?=.*[A-Z])(?=.*[0-9])(?=.*[+._@!-])[0-9a-zA-Z@!+_.]{8,}").matcher(name).matches();
+		if(isMatched)
+		{
+			System.out.println("You entered valid password!");
+		}
+		else
+		{
+			System.out.println("You entered ivalid password!");
 		}
 	}
 }
