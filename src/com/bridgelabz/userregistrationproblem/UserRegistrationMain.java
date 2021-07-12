@@ -58,5 +58,9 @@ public class UserRegistrationMain
 		 * Check password has atleast one numeric number
 		 */
 		obj5.checkNumericNumber(password);
+		/**UC8
+		 * Check password has atleast one special character or not
+		 */
+		obj5.checkSpecialCharacter(password);
 	}
 }

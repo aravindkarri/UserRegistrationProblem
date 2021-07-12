@@ -118,5 +118,20 @@ public class UserRegistration
 			System.out.println("Enter atleast one numeric number");
 		}
 	}
-	
+	/**
+	 * Method to ensure atleast one special character in password
+	 * @param name
+	 */
+	public void checkSpecialCharacter(String name)
+	{
+		boolean isMatched = Pattern.compile("(?=.*[+._@!-])[0-9a-zA-Z@!+_.]{8,}").matcher(name).matches();
+		if(isMatched)
+		{
+			System.out.println("Valid ! It contains special character");
+		}
+		else
+		{
+			System.out.println("Enter exactly one special character");
+		}
+	}
 }
