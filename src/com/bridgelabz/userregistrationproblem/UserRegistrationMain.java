@@ -49,5 +49,6 @@ public class UserRegistrationMain
 		UserRegistration obj5 = new UserRegistration();
 		obj5.isValidPassword(password);
 		
+		
 	}
 }
