@@ -54,6 +54,9 @@ public class UserRegistrationMain
 		 */
 		obj5.checkUpperCase(password);
 		
-		
+		/**UC7
+		 * Check password has atleast one numeric number
+		 */
+		obj5.checkNumericNumber(password);
 	}
 }

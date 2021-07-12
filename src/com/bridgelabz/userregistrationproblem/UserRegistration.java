@@ -79,11 +79,11 @@ public class UserRegistration
 		boolean isMatched = Pattern.compile("[0-9a-zA-Z@!+_.-]{8,}").matcher(name).matches();
 		if(isMatched)
 		{
-			System.out.println("It is valid password");
+			System.out.println("It has minimum 8 character");
 		}
 		else
 		{
-			System.out.println("It is not a valid password");
+			System.out.println("Enter minimum 8 characters");
 		}
 	}
 	/**
@@ -100,6 +100,22 @@ public class UserRegistration
 		else
 		{
 			System.out.println("Enter atleast one uppercase letter");
+		}
+	}
+	/**
+	 * Method to ensure password have atleast one numeric number
+	 * @param name
+	 */
+	public void checkNumericNumber(String name)
+	{
+		boolean isMatched = Pattern.compile("(?=.*[0-9])[0-9a-zA-Z@!+_.]{8,}").matcher(name).matches();
+		if(isMatched)
+		{
+			System.out.println("Valid ! It contains numeric number");
+		}
+		else
+		{
+			System.out.println("Enter atleast one numeric number");
 		}
 	}
 	
